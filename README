@@ -1,0 +1,17 @@
+NAME
+    Plack::Session::State::OpenSocialID -
+
+SYNOPSIS
+      use Plack::Session::State::OpenSocialID;
+
+DESCRIPTION
+    Plack::Session::State::OpenSocialID is
+
+AUTHOR
+    Nishibayashi Takuji <takuji {at} senchan.jp>
+
+SEE ALSO
+LICENSE
+    This library is free software; you can redistribute it and/or modify it
+    under the same terms as Perl itself.
+
