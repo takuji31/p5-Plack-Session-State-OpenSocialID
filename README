@@ -1,16 +1,28 @@
 NAME
-    Plack::Session::State::OpenSocialID -
+    Plack::Session::State::OpenSocialID - Session state for Plack::Session
+    by opensocial_viewer_id
 
 SYNOPSIS
+      use Plack::Builder;
       use Plack::Session::State::OpenSocialID;
 
+      my $app = sub { #do something }
+
+      builder {
+        enable 'Session', state => Plack::Session:State::OpenSocialID->new;
+        $app;
+      }
+
 DESCRIPTION
-    Plack::Session::State::OpenSocialID is
+    Plack::Session::State::OpenSocialID is Session state for Plack::Session
+    by opensocial_viewer_id
 
 AUTHOR
     Nishibayashi Takuji <takuji {at} senchan.jp>
 
 SEE ALSO
+    Plack Plack::Session Plack::Session::State
+
 LICENSE
     This library is free software; you can redistribute it and/or modify it
     under the same terms as Perl itself.

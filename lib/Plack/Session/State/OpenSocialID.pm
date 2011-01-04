@@ -10,17 +10,20 @@ our $VERSION = '0.01';
 our $SESSION_KEY = 'opensocial_viewer_id';
 
 sub new {
-    my $class = shift;
-    my %params = ();
-    $params{'session_key'} = $SESSION_KEY;
-    $params{'sid_validator'} = qr/^[0-9]+$/;
-    bless \%params,$class;
+    my $class  = shift;
+    my $params = {
+        session_key   => $SESSION_KEY,
+        sid_validator => qr/^[0-9]+$/,
+    };
+    bless $params, $class;
 }
 
-sub generate {
+sub get_session_id {
     my ( $self, $env ) = @_;
     return Plack::Request->new($env)->param($SESSION_KEY);
 }
+
+sub generate { shift->get_session_id(@_) }
 
 1;
 __END__
